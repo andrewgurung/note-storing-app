@@ -1,5 +1,5 @@
 {
-  "name": "Note Storing Application",
+  "name": "note-storing-app",
   "version": "1.0.0",
   "description": "A simple note-storing application using AngularJS",
   "main": "server.js",
