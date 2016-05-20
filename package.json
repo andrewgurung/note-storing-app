@@ -1,0 +1,17 @@
+{
+  "name": "Note Storing Application",
+  "version": "1.0.0",
+  "description": "A simple note-storing application using AngularJS",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewgurung/note-storing-app.git"
+  },
+  "author": "Andrew Gurung",
+  "license": "MIT",
+  "homepage": "http://andrewgurung.github.io/",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.2"
+  }
+}
