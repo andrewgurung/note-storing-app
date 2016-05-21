@@ -11,5 +11,13 @@ angular.module('App')
     $scope.notes = data;
   }).error(function(err) {
     $scope.error = 'Could not load notes';
-  })
+  });
+
+  $scope.view = function (index) {
+    // Sets editing state to false because you want to just view an item
+    $scope.editing = false;
+
+    // Sets a new model for content model to contain note that was clicked
+    $scope.content = $scope.notes[index];
+  };
 });
