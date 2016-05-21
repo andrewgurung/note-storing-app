@@ -38,13 +38,13 @@ angular.module('App')
     // Yes -> Update using put method
     // No -> Create new note using post method
     if($scope.content.id) {
-      $http.put('/notes', $scope.content).success(function(data) {
+      $http.put('/notes/' + $scope.content.id, $scope.content).success(function(data) {
         $scope.editing = false;
       });
     } else {
       // Set unique ID based on current timestamp
       $scope.content.id = Date.now();
-      $http.put('/notes', $scope.content).success(function(data) {
+      $http.post('/notes', $scope.content).success(function(data) {
         // Add to notes array to sync service layer with left notes list
         $scope.notes.push($scope.content);
         $scope.editing = false;
