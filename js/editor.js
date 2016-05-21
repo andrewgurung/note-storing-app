@@ -20,4 +20,12 @@ angular.module('App')
     // Sets a new model for content model to contain note that was clicked
     $scope.content = $scope.notes[index];
   };
+
+  $scope.create = function() {
+    $scope.editing = true;
+    $scope.content = {
+      title: '',
+      content: ''
+    }
+  }
 });
