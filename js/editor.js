@@ -51,4 +51,26 @@ angular.module('App')
       });
     }
   };
+
+  $scope.remove = function() {
+    // Makes delete request to notes API
+    $http.delete('/notes/' + $scope.content.id).success(function(data) {
+      var found = -1;
+      angular.forEach($scope.notes, function(note, index) {
+        if(note.id === $scope.content.id) {
+          found = index;
+        }
+      });
+
+      // If found, removes it from notes list
+      if(found >= 0) {
+        $scope.notes.splice(found, 1);
+      }
+      // Reset content
+      $scope.content = {
+        title: '',
+        content: ''
+      }
+    });
+  };
 });
